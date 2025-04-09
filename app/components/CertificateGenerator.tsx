@@ -61,55 +61,18 @@ export default function CertificateGenerator({ name }: CertificateGeneratorProps
   };
 
   return (
-    <Container size="lg" p={0}>
+    <Container size="sm" p={0} className="w-full">
       <Paper shadow="sm" radius="md" p="lg" withBorder>
-        <Stack gap="md">
-          {/* Certificate Preview */}
-          <Paper radius="md" className="bg-gray-50 p-4">
-            <div 
-              className="relative bg-white rounded-lg shadow-sm"
-              style={{ 
-                width: '808px',
-                maxWidth: '100%',
-                margin: '0 auto',
-                padding: '24px'
-              }}
-            >
-              <div className="relative" style={{ width: '808px', height: '624px', maxWidth: '100%' }}>
-                <img 
-                  src="/sertifika.png" 
-                  alt="Sertifika Şablonu" 
-                  style={{
-                    position: 'absolute',
-                    left: '50%',
-                    top: '132%',
-                    transform: 'translate(-50%, -100%)',
-                    width: '808px',
-                    height: '624px',
-                    maxWidth: '100%',
-                    objectFit: 'contain'
-                  }}
-                />
-                <div 
-                  style={{
-                    position: 'absolute',
-                    left: 0,
-                    right: 0,
-                    top: '78%',
-                    fontFamily: 'Hurricane, cursive',
-                    fontSize: '70px',
-                    color: '#ff6b6b',
-                    textShadow: '0px 0px 1px rgba(0,0,0,0.1)',
-                    textAlign: 'center',
-                    width: '100%',
-                    zIndex: 10
-                  }}
-                >
-                  {name || 'İsim Soyisim'}
-                </div>
-              </div>
-            </div>
-          </Paper>
+        <Stack gap="md" align="center">
+          <Button
+            onClick={downloadAsPDF}
+            disabled={!name}
+            size="lg"
+            leftSection={<IconDownload size={20} />}
+            className="bg-blue-500 hover:bg-blue-600"
+          >
+            Sertifikayı İndir
+          </Button>
         </Stack>
       </Paper>
     </Container>
