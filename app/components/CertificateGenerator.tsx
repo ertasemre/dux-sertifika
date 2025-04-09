@@ -25,7 +25,7 @@ export default function CertificateGenerator({ name }: CertificateGeneratorProps
     tempDiv.innerHTML = `
       <div style="position: relative; width: 2480px; height: 1754px; background: white;">
         <img src="/sertifika.png" style="width: 100%; height: 100%; object-fit: contain;" />
-        <div style="position: absolute; left: 0; right: 0; top: 33%; text-align: center; font-family: 'Hurricane', cursive; font-size: 120px; color: #ff6b6b; padding: 8px; text-shadow: 0px 0px 1px rgba(0,0,0,0.1);">
+        <div style="position: absolute; left: 0; right: 0; top: 33%; text-align: center; font-family: 'Hurricane', cursive; font-size: 150px; color: #ff6b6b; padding: 8px; text-shadow: 0px 0px 1px rgba(0,0,0,0.1);">
           ${name}
         </div>
       </div>
